@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+:root{
+    --font1: 'Nevis', sans-serif;
+    --font2: 'Damion', sans-serif;
+    --blanco: #fff;
+    --negro: #000;
+    --color01: #6fd1d1;
+    --color02: #333;
+    --color03: #626262;
+    --maxwidth: 100vw;
+    --maxheight: 100vh;
+}
+
+#logo {
+    height: 80px;
+    margin-left: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+body{
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+}
+/* Header */
+
+header {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    font-family: var(--font1);
+    width: var(--maxwidth);
+    filter: luminosity(30%);
+    height: 100px;
+}
+
+header #logo {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-family: var(--font1);
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+header nav {
+    display: inline-flex;
+    justify-content: flex-end;
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 10px;
+    text-align: center;
+    font-family: var(--font1);
+    width: var(--maxwidth);
+}
+
+nav a {
+    float: right;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: var(--font1);
+    text-align: right;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+nav a:hover {
+    color: var(--color01);
+}
+
+/* Main */
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: var(--font2);
+    height: 93vh;
+    width: var(--maxwidth);
+    background-image: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.35) 65%,
+            rgba(0, 0, 0, 0.16) 100%,
+            rgba(0, 0, 0, 0.16) 109%),
+        url(img/fondohead.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.inicio h1 {
+    font-family: Nevis, sans-serif;
+    font-size: 200px;
+    color: var(--blanco);
+    text-align: center;
+    position: relative;
+}
+
+.inicio p{
+    color:var(--blanco);
+    font-size: 3rem;
+    font-family: var(--font2);
+    animation: animate 1s linear;
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translate(50px, 0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+.inicio i{
+    color: var(--blanco);
+    font-size: 3rem;
+    animation: bounce 1.5s linear infinite;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: -230px;
+    stroke-width: 0.75px;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    50%{
+        transform: translate(0px, -10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+.second-section, .four-section{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: var(--blanco);
+    height: max-content;
+    width: var(--maxwidth);
+}
+
+.second-section .right img{
+    width: 500px;
+}
+
+.second-section .right{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: aparecer;
+    animation-range: entry 25% cover 75%;
+    animation-fill-mode: both;
+}
+
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        transform: translate(200px, 0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+.second-section .right a{
+    font-family: Nevis, sans-serif;
+    color: var(--color01);
+    font-weight: bold;
+}
+
+
+.second-section .left{
+    height: 100%;
+    width: 50%;
+    padding: 50px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+}
+
+.left h2{
+    font-family: Nevis, sans-serif;
+    font-size: 2.5rem;
+    color: var(--color01);
+    text-align: center;
+}
+
+.left .br{
+    background: url(./img/hr.png) no-repeat center;
+    position: relative;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.left #subtitle, .four-section .left p{
+    text-align: center;
+    font-family: var(--font2);
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--color02);
+}
+
+.left p{
+    text-align: center;
+    font-family: var(--font1);
+    font-size: 0.8rem;
+    color: var(--color02);
+    font-weight: 400;
+}
+
+.third-section{
+    background-image: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.35) 65%,
+            rgba(0, 0, 0, 0.16) 100%,
+            rgba(0, 0, 0, 0.16) 109%),
+        url(./img/locations.jpg);
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2071px;
+    background-position:inherit;   
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-section h2{
+    font-family: var(--font1);
+    font-size: 5rem;
+    color: var(--color01);
+    text-align: center;
+    padding-top: 50px;
+    width: 50%;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.third-section p{
+    font-family: var(--font2);
+    color: var(--blanco);
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.four-section .left {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.four-section .right {
+    margin-left: 120px;
+    margin-right: -100px;
+}
+
+.four-section .left img{
+    width: 350px;
+    align-self: center;
+    padding-right: 0px;
+}
+
+.four-section .right img{
+    width: 450px;
+}
+
+button{
+    background-color: var(--color03);
+    border: none;
+    color: var(--blanco);
+    width: max-content;
+    padding: 10px;
+    align-self: center;
+    font-family: var(--font1);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+footer{
+    background-color: #414141;
+    text-align: center;
+    color: var(--blanco);
+    padding: 10px;
+    font-family: var(--font1);
+}
+
+footer .locations p{
+    font-weight: bold;
+    padding: 10px;
+}
+
+footer .contact{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    width: 40vw;
+    font-size: 1rem;
+}
+
+footer .copyri{
+    padding: 10px;
+    font-size: 0.8rem;
+    color: var(--color01);
+}
